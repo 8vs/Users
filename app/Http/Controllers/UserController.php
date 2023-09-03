@@ -29,7 +29,7 @@ class UserController extends Controller
     public function result(Request $request)
     {
         $data = $request -> all();
-        dd($data);
-        return view('result');
+
+        return view('result', $data);
     }
 }

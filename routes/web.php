@@ -16,4 +16,4 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [UserController::class, 'home']);
 Route::get('/statistic', [UserController::class, 'statistic']);
-Route::post('/result', [UserController::class, 'result']);
+Route::get('/result', [UserController::class, 'result']);

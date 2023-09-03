@@ -1,3 +1,4 @@
-<footer class="bd-footer py-3 py-md-1 mt-1 text-center bg-body-tertiary">
-    {{config('app.name')}} by AstashkinaDS, {{date('Y')}}
+<footer class="d-flex flex-wrap justify-content-between align-center py-3 my-4 border-top">
+    
+    "{{config('app.name')}}" by AstashkinaDS, {{date('Y')}}
 </footer>
