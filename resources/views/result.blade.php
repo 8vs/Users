@@ -9,7 +9,7 @@
                     $name = $_GET['name'];
                     if (isset($name)) {
                         echo "Количество пользователей с именем ".$name." равно ".$count."</br> ";
-                        getTable($users, $count);
+                        getTableAll($users, $count);
                     } else 
                         echo "Не хватает параметров для выполнения запроса";
                     break;
@@ -22,7 +22,7 @@
 
                     if (isset($age1)&isset($age2)) {
                         echo "Количество пользователей возраст которых в диапазоне от ".$age1." до ".$age2." равно ".$count."</br> ";
-                        getTable($users, $count);
+                        getTableAll($users, $count);
                     } else 
                         echo "Не хватает параметров для выполнения запроса";
                     break;
@@ -50,7 +50,7 @@
             echo 'Параметр для вывода статистики не передан'; 
 
 
-        function getTableMore($users, $count) {
+        function getTableAll($users, $count) {
             if($count == 0)
                 echo "</br> Нет записей в базе данных, удовлетворяющих запросу.";
             else {

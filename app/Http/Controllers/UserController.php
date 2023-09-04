@@ -28,21 +28,21 @@ class UserController extends Controller
         return view('statistic');
     }
 
-    public function result1(Request $request)
+    public function nameStatistic(Request $request)
     {
         $action = $request -> all('action');
         $name = $request -> all('name');
         
         $users = User::query()
             ->where('name', '=', $name)
-            ->paginate(12);
+            ->get();
         
         $count = $users->count();
 
         return view('result', compact('users', 'count'));
     }
 
-    public function result2(Request $request)
+    public function ageStatistic(Request $request)
     {
         $action = $request -> all('action');
         $age1 = $request -> all('age1');
@@ -52,12 +52,12 @@ class UserController extends Controller
             $users = User::query()
                 ->where('age', '<', $age2)
                 ->where('age', '>', $age1)
-                ->paginate(12);
+                ->get();
         } else {
             $users = User::query()
                 ->where('age', '>', $age2)
                 ->where('age', '<', $age1)
-                ->paginate(12);
+                ->get();
         }
         
         $count = $users->count();
@@ -65,14 +65,14 @@ class UserController extends Controller
         return view('result', compact('users', 'count'));
     }
 
-    public function result3(Request $request)
+    public function AvgAgeStatistic(Request $request)
     {
         $users = User::avg('age');
         
         return view('result', compact('users'));
     }
 
-    public function result4(Request $request)
+    public function PopularNameStatistic(Request $request)
     {
         $users = DB::table('users')
             ->selectRaw('name as id, COUNT(name) as count')
@@ -83,7 +83,7 @@ class UserController extends Controller
         return view('result', compact('users'));
     }
 
-    public function result5(Request $request)
+    public function PopularCityStatistic(Request $request)
     {
         $users = DB::table('users')
             ->selectRaw('city as id, COUNT(city) as count')
