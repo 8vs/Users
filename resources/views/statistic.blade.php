@@ -8,11 +8,11 @@
     <div class="row">
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <form action="/result" method="get">
+                <form action="/result/1" method="get">
                     <input type="hidden" value="{{ csrf_token() }}">
                     <input type="hidden" name="action" value="1">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="name" placeholder="Имя" required pattern="[А-Я]{1}[а-я]{0,29}">
+                        <input type="text" class="form-control" name="name" placeholder="Имя" required >
                         <input type="submit" class="btn btn-primary" value="Найти">
                     </div> 
                 </form>
@@ -27,12 +27,12 @@
     <div class="row">
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample2">
-                <form action="/result" method="get">
+                <form action="/result/2" method="get">
                     <input type="hidden" value="{{ csrf_token() }}">
                     <input type="hidden" name="action" value="2">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="age1" placeholder="От" required pattern="[0-9]{0,3}">
-                        <input type="text" class="form-control" name="age2" placeholder="До" required pattern="[0-9]{0,3}">
+                        <input type="text" class="form-control" name="age1" placeholder="От" required pattern="[0-9]{0,2}">
+                        <input type="text" class="form-control" name="age2" placeholder="До" required pattern="[0-9]{0,2}">
                         <input type="submit" class="btn btn-primary" value="Найти">
                     </div>
                 </form>
@@ -47,7 +47,7 @@
     <div class="row">
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample3">
-                <form action="/result" method="get">
+                <form action="/result/3" method="get">
                     <input type="hidden" value="{{ csrf_token() }}">
                     <input type="hidden" name="action" value="3">
                     <div class="input-group mb-3">
@@ -65,7 +65,7 @@
     <div class="row">
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample4">
-                <form action="/result" method="get">
+                <form action="/result/4" method="get">
                     <input type="hidden" value="{{ csrf_token() }}">
                     <input type="hidden" name="action" value="4">
                     <div class="input-group mb-3">
@@ -83,7 +83,7 @@
     <div class="row">
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample5">
-                <form action="/result" method="get">
+                <form action="/result/5" method="get">
                     <input type="hidden" value="{{ csrf_token() }}">
                     <input type="hidden" name="action" value="5">
                     <div class="input-group mb-3">

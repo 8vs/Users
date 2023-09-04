@@ -16,4 +16,8 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [UserController::class, 'home']);
 Route::get('/statistic', [UserController::class, 'statistic']);
-Route::get('/result', [UserController::class, 'result']);
+Route::get('/result/1', [UserController::class, 'result1']);
+Route::get('/result/2', [UserController::class, 'result2']);
+Route::get('/result/3', [UserController::class, 'result3']);
+Route::get('/result/4', [UserController::class, 'result4']);
+Route::get('/result/5', [UserController::class, 'result5']);
